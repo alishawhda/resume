@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alisha Wahida Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: #0a4870;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        .hello-section {
+            background-color: #0a4870;
+            padding: 120px 50px 80px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .profile-image {
+            background-color: #d3d3d3;
+            border-radius: 30px;
+            padding: 40px;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-circle {
+            background: linear-gradient(180deg, #a8d5e2 0%, #6eb5d0 100%);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hello-text {
+            flex: 1;
+        }
+
+        .hello-text h1 {
+            color: white;
+            font-size: 120px;
+            font-weight: 900;
+            letter-spacing: 10px;
+        }
+
+        .hi-section {
+            background-color: #e8e8e8;
+            padding: 100px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .hi-text {
+            flex: 1;
+        }
+
+        .hi-text h2 {
+            font-size: 80px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .hi-text h3 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .hi-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .hi-image {
+            background-color: #0a4870;
+            border-radius: 30px;
+            padding: 50px;
+            width: 320px;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hi-circle {
+            background: linear-gradient(180deg, #6eb5d0 0%, #4a9dbd 100%);
+            border-radius: 50%;
+            width: 220px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .education-wrapper {
+            background-color: #0a4870;
+            padding: 100px 50px;
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .education-section {
+            flex: 1;
+        }
+
+        .education-section h2 {
+            color: white;
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-decoration: underline;
+        }
+
+        .education-item {
+            background-color: #d3d3d3;
+            border-radius: 50px;
+            padding: 20px 40px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            min-height: 100px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .education-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #a8d5e2;
+        }
+
+        .education-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .education-content {
+            flex: 1;
+            color: #333;
+        }
+
+        .education-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .education-content p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .achievements-section {
+            flex: 0 0 450px;
+            background-color: #0a4870;
+        }
+
+        .achievements-section h2 {
+            color: white;
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-decoration: underline;
+        }
+
+        .achievements-table {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievements-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .achievements-table th {
+            background-color: #1a5880;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 700;
+            border-bottom: 2px solid #0a4870;
+        }
+
+        .achievements-table td {
+            padding: 15px;
+            font-size: 14px;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .achievements-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .achievements-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .friends-container {
+            background-color: #f4c542;
+            border-radius: 30px;
+            padding: 40px;
+            width: 350px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .friends-container h2 {
+            color: white;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .friends-image-box {
+            background: linear-gradient(180deg, #e0f4ff 0%, #a8d5e2 50%, #7fb859 100%);
+            border-radius: 20px;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cloud {
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .cloud-1 {
+            width: 80px;
+            height: 40px;
+            top: 30px;
+            right: 60px;
+        }
+
+        .cloud-1::before,
+        .cloud-1::after {
+            content: '';
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .cloud-1::before {
+            width: 50px;
+            height: 50px;
+            top: -20px;
+            left: 10px;
+        }
+
+        .cloud-1::after {
+            width: 40px;
+            height: 40px;
+            top: -15px;
+            right: 15px;
+        }
+
+        .skills-section {
+            background-color: #0a4870;
+            padding: 100px 50px;
+        }
+
+        .skills-section h2 {
+            color: white;
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-decoration: underline;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .skill-box {
+            background-color: #1a5880;
+            border-radius: 25px;
+            padding: 50px;
+            transition: transform 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-box h3 {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .skill-box ul {
+            list-style: none;
+        }
+
+        .skill-box li {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .experience-section {
+            background-color: #e8e8e8;
+            padding: 100px 50px;
+        }
+
+        .experience-section h2 {
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-decoration: underline;
+        }
+
+        .experience-gallery {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-section {
+            background-color: #000;
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .contact-btn {
+            background-color: white;
+            color: black;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #ddd;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 50px;
+        }
+
+        .modal-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            opacity: 0.3;
+        }
+
+        .modal-inner {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .modal-btn {
+            background-color: white;
+            color: #0a4870;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .modal-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .close-btn {
+            background-color: #ff4444;
+            color: white;
+        }
+
+        .close-btn:hover {
+            background-color: #cc0000;
+        }
+
+        .modal-image-container {
+            width: 100%;
+            max-height: 400px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .modal-image-container img,
+        .modal-image-container video {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .modal-details h2 {
+            font-size: 32px;
+            color: #0a4870;
+            margin-bottom: 15px;
+        }
+
+        .modal-details p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop controls style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About me</a></li>
+			<li><a href="#skills">Skill</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="about" class="hi-section">
+        <div class="hi-text">
+            <h2>HI!</h2>
+            <h3>I'm Alisha Wahida</h3>
+            <p>Hi, I'm Alisha Wahida, 20 years old, and I'm the eldest of two siblings. I have a passion for baking and practicing silat-it's something I really enjoy doing in my free time. One of my favorite things in the world is driving, especially at night; it's the one thing that really makes me feel calm and at peace.</p>
+            <p>At home, I share my life with two adorable cats, Meyka and Bonda. They always manage to make me smile, even on stressful days. I enjoy the simple things in life, like quiet evenings, good food, and moments where I can just relax and recharge.
+I'm someone who values honesty and being straightforward. I like spending time with people I care about and also appreciate my own space when I need it. Life, for me, is about little joys and meaningful connections, whether it's through my hobbies, time with family, or just a peaceful night drive.</p>
+        </div>
+        <div class="hi-images-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 400px;">
+            <img src="fam.jpg" alt="Family 1" style="grid-column: 1 / 3; width:100%; height: 230px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <img src="meyka1.jpg" alt="Family 2" style="width: 100%; height: 200px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <img src="bonda.jpg" alt="Family 3" style="width: 100%; height: 200px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+        </div>
+    </div>
+
+    <div id="skills" class="skills-section">
+        <h2>Skill</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>• Microsoft Office</li>
+                    <li>• Basic HTML and CSS</li>
+                    <li>• Video editing tools</li>
+                    <li>• Database design</li>
+                    <li>• Adobe Illustrator, Photoshop, Premiere Pro</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>1. Time management & organization</li>
+                    <li>2. Problem-solving</li>
+                    <li>3. Communication & interpersonal skills</li>
+                    <li>4. Leadership</li>
+                    <li>5. Analytical thinking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience" class="experience-section">
+        <h2>Experience</h2>
+        
+        <div class="experience-gallery">
+            <div class="gallery-item" onclick="openModal('internship1.jpg', 'First day of Internship', 'It was my first day of internship, and I was excited to start a new journey.')">
+                <img src="internship1.jpg" alt="Internship 1">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('video1.mp4', 'Organise all the files', 'I organized and managed documents and records related to complaints from parents in an orderly and systematic manner.', true)">
+                <video>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('internship2.jpg', 'My supervisors.', 'We often had our meals together, which helped strengthen our relationship and created a comfortable working environment.')">
+                <img src="internship2.jpg" alt="Internship 2">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('internship3.jpg', 'Internship Title 3', 'Description for internship 3.')">
+                <img src="internship3.jpg" alt="Internship 3">
+            </div>
+            
+            <div class="gallery-item" style="grid-column: span 2;" onclick="openModal('internship4.jpg', 'Internship Title 4', 'Description for internship 4.')">
+                <img src="internship4.jpg" alt="Internship 4">
+            </div>
+            
+            <div class="gallery-item" style="grid-column: span 2;" onclick="openModal('internship6.jpg', 'Internship Title 4', 'Description for internship 4.')">
+                <img src="internship6.jpg" alt="Internship 6">
+            </div>
+            
+            <div class="gallery-item" style="grid-column: span 2;" onclick="openModal('video2.mp4', 'Video Project 2', 'Description for video project 2.', true)">
+                <video>
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="gallery-item" style="grid-column: span 2;" onclick="openModal('internship5.jpg', 'Internship Title 5', 'Description for internship 5.')">
+                <img src="internship5.jpg" alt="Internship 5">
+            </div>
+        </div>
+    </div>
+
+    <div class="education-wrapper" id="education">
+        <div class="education-section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <img src="uitm.png" alt="Profile">
+                <div class="education-content">
+                    <h3>University Technology Mara Segamat</h3>
+                    <p>Diploma in Information Management</p>
+                    <p>2023-Now</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <img src="smk.png" alt="Profile">
+                <div class="education-content">
+                    <h3>Sekolah Menengah Bandar T6</h3>
+                    <p>2018-2022</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <img src="sk.png" alt="Profile">
+                <div class="education-content">
+                    <h3>Sekolah Kebangsaan Bandar T6</h3>
+                    <p>2018-2012</p>
+                </div>
+            </div>
+			
+
+        </div>
+
+        <div class="achievements-section">
+            <h2>Achievements</h2>
+            <div class="achievements-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Academic</td>
+                            <td>
+		<li>⭐ Dean's List,Semester 1 with a GPA of 3.52.</li>
+        <li>⭐ Dean's List,Semester 3 with a GPA of 3.72.</li>
+        <li>⭐ Dean's List,Semester 4 with a GPA of 3.75</li>
+					</td>
+                        </tr>
+                        <tr>
+                            <td>Leadership</td>
+                            <td>Class Representative</td>
+                        </tr>
+                        <tr>
+                            <td>Sports</td>
+                            <td>
+							<li>⭐ Runner-up, Supro Futsal</li>
+							<li>⭐ Archery, State Level</li>
+							</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+			 <p style="text-align: center; margin-top: 30px; color: white; font-style: italic;">
+            "The best way to predict the future is to create it." - Peter Drucker
+        </p>
+	
+        </div>
+		 
+    </div>
+
+    <div id="contact" class="contact-section">
+	<center>
+        <h2>Let's connect </h2>
+		</center>
+        <p>Find me on social media and let's start a conversation!</p>
+        <div class="contact-buttons">
+            <a href="https://www.instagram.com/alishawhda_?igsh=MWIzMXNmYmQwbTI0aw==&utm_source=ig_contact_invite" class="contact-btn" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@elly3_0?_r=1&_t=ZS-913fbeSeSxE" class="contact-btn" target="_blank">TikTok</a>
+            <a href="mailto:alishawhda@gmail.com" class="contact-btn">Email</a>
+        </div>
+		
+    </div>
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-background" id="modalBackground"></div>
+            <div class="modal-nav">
+                <button class="modal-btn" onclick="previousItem()">Back</button>
+                <button class="modal-btn" onclick="nextItem()">Next</button>
+                <button class="modal-btn close-btn" onclick="closeModal()">Close</button>
+            </div>
+            <center>
+            <div class="modal-inner">
+                <div class="modal-image-container" id="modalImageContainer"></div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">Title:</h2>
+                    <p id="modalDescription">Description:</p>
+                </div>
+            </div>
+            </center>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const experiences = [
+            { src: 'internship1.jpg', title: 'First day of Internship', desc: 'It was my first day of internship, and I was excited to start a new journey.', isVideo: false },
+            { src: 'video1.mp4', title: 'Organized all documents and records', desc: 'I organized and managed documents and records related to complaints from parents in an orderly and systematic manner.', isVideo: true },
+            { src: 'internship2.jpg', title: 'My supervisors', desc: 'We often had our meals together, which helped strengthen our relationship and created a comfortable working environment.', isVideo: false },
+            { src: 'internship3.jpg', title: 'Program Telaah Karya Agung', desc: 'In this program, I served as the timekeeper and PC handler.', isVideo: false },
+            { src: 'internship4.jpg', title: 'Preparation for Program Fun Walk', desc: 'This activity involved a gotong-royong session as part of the preparation for the fun run program.', isVideo: false },
+            { src: 'internship6.jpg', title: 'Developing a Website for Pejabat Pendidikan Daerah Kluang', desc: 'The website contains information on PPD staff and teachers, and is accompanied by a user manual developed for user guidance.', isVideo: false },
+            { src: 'video2.mp4', title: 'Preparation for Program Fun Walk', desc: 'This activity involved a gotong-royong session as part of the preparation for the fun run program.', isVideo: true },
+            { src: 'internship5.jpg', title: 'Majlis Anugerah Perkhidmatan Cemerlang', desc: 'For this ceremony, I handled the registration process.', isVideo: false }
+        ];
+
+        function openModal(src, title, description, isVideo = false) {
+            currentIndex = experiences.findIndex(exp => exp.src === src);
+            displayModalContent(currentIndex);
+            document.getElementById('detailModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.remove('active');
+        }
+
+        function displayModalContent(index) {
+            const exp = experiences[index];
+            const container = document.getElementById('modalImageContainer');
+            const background = document.getElementById('modalBackground');
+            
+            background.style.backgroundImage = `url('${exp.isVideo ? 'background.jpg' : exp.src}')`;
+            
+            if (exp.isVideo) {
+                container.innerHTML = `<video controls><source src="${exp.src}" type="video/mp4"></video>`;
+            } else {
+                container.innerHTML = `<img src="${exp.src}" alt="${exp.title}">`;
+            }
+            
+            document.getElementById('modalTitle').textContent = 'Title: ' + exp.title;
+            document.getElementById('modalDescription').textContent = 'Description: ' + exp.desc;
+        }
+
+        function nextItem() {
+            currentIndex = (currentIndex + 1) % experiences.length;
+            displayModalContent(currentIndex);
+        }
+
+        function previousItem() {
+            currentIndex = (currentIndex - 1 + experiences.length) % experiences.length;
+            displayModalContent(currentIndex);
+        }
+
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>

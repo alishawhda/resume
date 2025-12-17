@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <title>ABOUT ALISHA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('background.jpg') center/cover no-repeat fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            gap: 0;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: #FAFAFA;
+            padding: 60px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 400px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            background: #c4b5a8;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #c4b5a8;
+            margin: 15px auto;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #666;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: #1a1a1a;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0066ff;
+        }
+
+        .content-section {
+            background: white;
+            padding: 60px 80px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            flex: 1;
+            margin-left: -20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section h1 {
+            font-size: 72px;
+            font-weight: 900;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: #0066ff;
+            color: white;
+            border: 2px solid #0066ff;
+        }
+
+        .btn-primary:hover {
+            background: #0052cc;
+            border-color: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,102,255,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #1a1a1a;
+            border: 2px solid #1a1a1a;
+        }
+
+        .btn-secondary:hover {
+            background: #1a1a1a;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .description p {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .profile-card {
+                width: 100%;
+                padding: 40px 30px;
+            }
+
+            .content-section {
+                margin-left: 0;
+                margin-top: -20px;
+                padding: 40px 30px;
+            }
+
+            .content-section h1 {
+                font-size: 48px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="gmbr2.jpg" alt="Alisha">
+            </div>
+            <h2 class="name">Nur Alisha Wahida binti Rosly</h2>
+            <div class="divider"></div>
+            <p class="title">STUDENT</p>
+            
+        </div>
+
+        <div class="content-section">
+            <h1>Hello</h1>
+            <p class="subtitle">Here's who I am & what I do</p>
+            
+            <div class="buttons">
+                <a href="index.html" class="btn btn-primary">RESUME</a>
+            </div>
+
+            <div class="description">
+                <p>Hello! I’m Nur Alisha Wahida, an Information Management student who loves organizing information and learning how systems work behind the scenes. </p>
+                
+                <p>I’m always excited to gain new experiences and grow my skills through projects and internships.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
